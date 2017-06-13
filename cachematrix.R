@@ -1,15 +1,28 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Programming assignment 2
 
-## Write a short comment describing this function
+neo <- matrix(data = c(1,2,3,4), nrow=2, ncol=2)
+
+## create an inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
+  m <<- solve(x)
 
 }
 
+makeCacheMatrix(neo)
 
-## Write a short comment describing this function
+## print inverse matrix from above or generate it if non-existing, then print.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+  
+  if(exists("m")==TRUE) {
+        m
+  }
+  else {
+    m <- makeCacheMatrix(x)
+  m
+  }
 }
+
+
+cacheSolve(neo)
